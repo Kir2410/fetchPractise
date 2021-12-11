@@ -1,1 +1,1 @@
-console.log("привет!");
+fetch("db.json").then((o=>o.json())).then((o=>((o,t)=>fetch("https://jsonplaceholder.typicode.com/posts",{method:"POST",body:t,headers:{"Content-type":"application/json; charset=UTF-8"}}).then((o=>o.json())))(0,JSON.stringify(o)))).then((o=>console.log(o))).catch((o=>console.log(o)));
